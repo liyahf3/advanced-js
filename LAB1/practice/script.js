@@ -55,3 +55,6 @@ alert(age);
 
 // Functions can also be written as arrows. Body of function doesn't change, just the signature.
 
+
+const prompt = require("prompt-sync")();
+

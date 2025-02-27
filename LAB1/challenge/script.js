@@ -16,41 +16,60 @@ let shoes = 89.78;
 
 
 // 1. If divided evenly, how much would each sibling get for the week?
+const split = weeklyAllowance/3
+console.log(split);
 
 // 2. How many games can Jordan buy with their cut?
-
+const games = Math.floor(split/game)
 // 3. The cost of games just went up by a dollar and shoes are on sale at 50% (half) off. Change the variables to their new prices.
+const newGames = 16.99;
+const newShoes = 44.89;
+
 
 // 4. Quinn and Ricardo are twins. If they put their money together, how many on sale shoes can they buy in a month (4 weeks)?
+const twins = (split * 2); 
+const buy = Math.floor(twins/newShoes);
+console.log(buy);
 
 // 5. How many more games can they buy if they put their money together compared to if they had bought games on their own?
+ const twinGames = Math.floor(twins/newGames); 
+ const moreGames = twinGames - games;
+ console.log(moreGames); 
 
 // 6. Print out the three siblings' names. "The three siblings are __, __, and ___."
 
+console.log ("The three siblings names are " + sibling1 +"," + sibling2 + ","+ sibling3); 
 // 7. Use console.log() and a built-in method to count how many characters are in Ricardo's name.
+const length = sibling3.length;
+console.log (length);
 
 // 8. Use console.log() and a built-in method to print out the string "RICARDO MONTOYA DE LA ROSA RAMIREZ"
-
+let uppercase = sibling3.toUpperCase();
+console.log(uppercase);
 // 9. Use console.log() and a built-in method to print out the string "ricardo montoya de la rosa ramirez"
+let lowercase = sibling3.toLowerCase();
+console.log(lowercase);
 
 // 10. Use console.log() and a built-in method to print out Ricardo's name, but with all the instances of the letter a removed or deleted.
+const name = "Ricardo";
+console.log(name.replace(/a/g,));
 
 // 11. Use console.log() and a built-in method to print out "De La Rosa"
-
+console.log("De La Rosa");
 // Medium Challenges
 
 // 12. Rewrite these function as an arrow function.
 /// Then, call them with different inputs to check the result.
 
-function getRandomNum() {
+const getRandomNum = () => {
     return Math.floor(Math.random() * 100);
 }
 
-function greeting(name) {
+const greeting = (name) =>  {
     return `Hello ${name}, I'm glad you can make it!`;
 }
 
-function perfectRoot(x) {
+const  perfectRoot = (x) => {
     let root = Math.sqrt(x);
     if (Math.floor(root) === root) {
         return root;
@@ -65,6 +84,8 @@ function perfectRoot(x) {
 /// a. Adds 2 numbers and returns the sum
 const addNums = (x, y) => {
     let sum = x + y;
+  console.log(addNums(4, 6));
+  addnNums(); 
 }
 // uncomment the line below, to call the function, and add one more function call
 // console.log( addNums(4, 6) );
@@ -72,12 +93,13 @@ const addNums = (x, y) => {
 
 /// b. Prints a special message if name is "Beyonce"
 const isBeyonce = (name) => {
-    // if( ) { 
-    //     return "Welcome Queen!";
-    // } else {
-    //     return `Sorry {name}, you're not Beyonce`;
-    // }
-}
+//     if(name) { 
+//     name = "Beyonce"
+//          return "Welcome Queen!";
+//  } else {
+//          return `Sorry {name}, you're not Beyonce`;
+//      }
+// }
 // Test "Beyonce" and other names to ensure it works
 
 
@@ -85,8 +107,9 @@ const isBeyonce = (name) => {
 /// c. If the number is even, return the number divided by 2, otherwise, return the number
 /// For example reduceEvens(10) => 5 -- reduceEvens(11) => 11
 const reduceEvens = (x) => {
-    // if( ){
-
+    // if( reduceEvens){
+// if (x % 2 === 0) {
+//         return x / 2;
     // } else {
     //     return x;
     // }
@@ -97,8 +120,14 @@ const reduceEvens = (x) => {
 // 14. Write a function called shortenString(string) that returns the first 10 characters of a string if it is longer than 10
 //remove all
 const shortenString = (string) => {
+// if(shortenString){
+//     string.length > 10 
+//     return string;
 
-}
+// }else{ 
+//     string.erase; 
+// }
+// }
 
 
 
@@ -134,3 +163,14 @@ const buyMeals = (budget) => {
 /// For example: factorial(3) = 3*2*1 = 6 ---  factorial(5) = 5*4*3*2*1 = 120
 /// Write a function factorial(x) that finds the factorial of any integer.
 // Prompt the user for a number and call the function
+
+
+
+
+
+
+
+
+
+//liyah// 
+}
