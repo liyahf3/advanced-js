@@ -141,7 +141,8 @@ let soda = 1.00;
 /// If no burgers, fries, and sodas can be bought, return "Sorry, no burgers for you."
 
 const buyBurgers = (budget) => {
-
+prompt("What is your budget? ")
+ buyBurgers();
 }
 
 // 16. A meal consists of 1 burger, 1 fry, and 1 soda.
@@ -149,7 +150,13 @@ const buyBurgers = (budget) => {
 // Prompt the user for their budget and call the function.
 /// Bonus: Round the answer to the nearest penny.
 const buyMeals = (budget) => {
-
+if(budget){
+buyBurgers <= burger + fries + soda;
+console.log("Sorry! You do not have enough")
+ } else{
+buyMeals - buyBurgers;
+console.log("Thank you for buying, here is your updated budget"); 
+ }
 }
 
 
@@ -173,4 +180,5 @@ const buyMeals = (budget) => {
 
 
 //liyah// 
+}
 }
