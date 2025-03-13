@@ -120,65 +120,101 @@ const reduceEvens = (x) => {
 // 14. Write a function called shortenString(string) that returns the first 10 characters of a string if it is longer than 10
 //remove all
 const shortenString = (string) => {
-// if(shortenString){
-//     string.length > 10 
-//     return string;
+  // if(shortenString){
+  //     string.length > 10
+  //     return string;
 
-// }else{ 
-//     string.erase; 
-// }
-// }
+  // }else{
+  //     string.erase;
+  // }
+  // }
 
+  // Spicy Challenges
+  let burger = 5.0;
+  let fries = 3.0;
+  let soda = 1.0;
 
+  // 15. Write a function buyBurgers(budget) that takes in a budget amount and returns the number of burgers that can be bought.
+  // Prompt the user for their budget and call the function.
+  /// If no burgers, fries, and sodas can be bought, return "Sorry, no burgers for you."
 
-// Spicy Challenges
-let burger = 5.00;
-let fries = 3.00;
-let soda = 1.00;
+  const buyBurgers = (budget) => {
+    prompt("What is your budget? ");
+    buyBurgers();
+  };
 
-// 15. Write a function buyBurgers(budget) that takes in a budget amount and returns the number of burgers that can be bought.
-// Prompt the user for their budget and call the function.
-/// If no burgers, fries, and sodas can be bought, return "Sorry, no burgers for you."
+  // 16. A meal consists of 1 burger, 1 fry, and 1 soda.
+  /// Write a function called buyMeals(budget) that tells the user how many meals they can buy and how much money they will have left over.
+  // Prompt the user for their budget and call the function.
+  /// Bonus: Round the answer to the nearest penny.
+  const buyMeals = (budget) => {
+    if (budget) {
+      buyBurgers <= burger + fries + soda;
+      console.log("Sorry! You do not have enough");
+    } else {
+      buyMeals - buyBurgers;
+      console.log("Thank you for buying, here is your updated budget");
+    }
+  };
 
-const buyBurgers = (budget) => {
-prompt("What is your budget? ")
- buyBurgers();
-}
+  // 17. [Challenge] Write a function missingLeg(side1, side2) that takes in the length of a hypotenuse and a leg of a right triangle and prints out the missing leg's length
+  // Prompt the user for the two sides and call the function
+  /// The larger side should be the hypotenuse
+  // Function to calculate the missing leg of a right triangle
+  function missingLeg(side1, side2) {
+    // Ensure the larger side is the hypotenuse
+    if (side1 < side2) {
+      console.log("Error: The larger side should be the hypotenuse.");
+      return;
+    }
 
-// 16. A meal consists of 1 burger, 1 fry, and 1 soda.
-/// Write a function called buyMeals(budget) that tells the user how many meals they can buy and how much money they will have left over.
-// Prompt the user for their budget and call the function.
-/// Bonus: Round the answer to the nearest penny.
-const buyMeals = (budget) => {
-if(budget){
-buyBurgers <= burger + fries + soda;
-console.log("Sorry! You do not have enough")
- } else{
-buyMeals - buyBurgers;
-console.log("Thank you for buying, here is your updated budget"); 
- }
-}
+    // Calculate and print the missing leg's length
+    const missingLegLength = Math.sqrt(Math.pow(side1, 2) - Math.pow(side2, 2));
+    console.log(
+      `The length of the missing leg is: ${missingLegLength.toFixed(2)}`
+    );
+  }
 
+  // Prompt the user for input
+  const side1 = parseFloat(prompt("Enter the length of the hypotenuse:"));
+  const side2 = parseFloat(prompt("Enter the length of one leg:"));
 
-// 17. [Challenge] Write a function missingLeg(side1, side2) that takes in the length of a hypotenuse and a leg of a right triangle and prints out the missing leg's length
-// Prompt the user for the two sides and call the function
-/// The larger side should be the hypotenuse  
+  // Call the function with user input
+  missingLeg(side1, side2);
 
+  // 18. [Super Challenge] In math, Factorial is the product of an integer and all the integers below it.
+  /// For example: factorial(3) = 3*2*1 = 6 ---  factorial(5) = 5*4*3*2*1 = 120
+  /// Write a function factorial(x) that finds the factorial of any integer.
+  // Prompt the user for a number and call the function
+  // Function to calculate the factorial of a number
+  function factorial(x) {
+    if (x < 0) {
+      return "Factorial is not defined for negative numbers.";
+    } else if (x === 0 || x === 1) {
+      return 1; // Base case: factorial of 0 or 1 is 1
+    } else {
+      let result = 1;
+      for (let i = 2; i <= x; i++) {
+        result *= i; // Multiply result by each number up to x
+      }
+      return result;
+    }
+  }
 
+  // Prompt the user for a number
+  const userInput = parseInt(
+    prompt("Enter an integer to find its factorial:"),
+    10
+  );
 
-// 18. [Super Challenge] In math, Factorial is the product of an integer and all the integers below it.
-/// For example: factorial(3) = 3*2*1 = 6 ---  factorial(5) = 5*4*3*2*1 = 120
-/// Write a function factorial(x) that finds the factorial of any integer.
-// Prompt the user for a number and call the function
+  // Validate input and call the function
+  if (isNaN(userInput)) {
+    console.log("Please enter a valid integer.");
+  } else {
+    const factorialResult = factorial(userInput);
+    console.log(`The factorial of ${userInput} is: ${factorialResult}`);
+  }
 
-
-
-
-
-
-
-
-
-//liyah// 
+  //liyah//
 }
 }
